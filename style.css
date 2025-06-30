@@ -1,0 +1,742 @@
+/* styles.css */
+/* Copyright (c) 2025 Your Name. All rights reserved. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient( 90deg, #C6EA8D, #FE90AF)
+
+}
+
+header {
+    background-image: linear-gradient(#D8B5FF, #1EAE98);
+    color: white;
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#home {
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.family-photo {
+    width: 100%;
+    max-width: 600px; /* You can adjust the size as needed */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.member-profession {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.member {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.member .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.member:hover .details {
+    opacity: 1;
+}
+
+.slideshow img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.tree {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tree ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.tree ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #333;
+    width: 0;
+    height: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    border-top: 2px solid #333;
+    height: 20px;
+}
+
+.tree li::after {
+    left: 50%;
+    border-left: 2px solid #333;
+}
+
+.tree li:first-child::before {
+    display: none;
+}
+
+.tree li:last-child::after {
+    display: none;
+}
+.member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.member:hover {
+    transform: scale(1.1); /* Scale the whole card on hover */
+}
+
+.member:hover img {
+    transform: scale(1.1); /* Ensure image is scaled with the card */
+}
+
+
+.member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.member-profession {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 800px; /* Set a fixed width */
+    margin: auto;
+    overflow: hidden;
+}
+
+.members-wrapper {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    width: 100%;
+    scrollbar-width: none; /* Hide scrollbar (optional) */
+}
+
+.members-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.member {
+    flex: 0 0 auto;
+    width: 180px; /* Set fixed width for each member */
+    margin: 10px;
+    text-align: center;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+.scroll-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+/* styles.css */
+
+.member {
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b); /* Gradient from one color to another */
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Ensure image stays visible and does not get hidden */
+.member:hover img {
+    transform: scale(1.1); /* Scale the image along with the card */
+}
+
+.member:hover {
+    transform: scale(1.1); /* Scale the entire card on hover */
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.member-profession {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Slideshow styles */
+.slideshow img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input,
+form textarea {
+    width: 40%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.tree {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tree ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.tree ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #333;
+    width: 0;
+    height: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree li::before,
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    border-top: 2px solid #333;
+    height: 20px;
+}
+
+.tree li::after {
+    left: 50%;
+    border-left: 2px solid #333;
+}
+
+.tree li:first-child::before {
+    display: none;
+}
+
+.tree li:last-child::after {
+    display: none;
+}
+
+.scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.members-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 90%;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.members-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.member {
+    position: relative;
+    width: 180px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.member:hover {
+    transform: scale(1.1); /* Scale the whole card on hover */
+    size: 105px;
+}
+
+.member:hover img {
+    transform: scale(1.1); /* Ensure image is scaled with the card */
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.member-profession {
+    font-size: 14px;
+    color: #080808;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.members-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.members-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.member {
+    flex: 0 0 auto;
+    width: 180px;
+    margin: 10px;
+    text-align: center;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+.scroll-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+#gallery {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Scale up the gallery item */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slightly scale up the image on hover */
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover::after {
+    opacity: 1; /* Dark overlay when hovering */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Scale the image when the card is hovered */
+}
+.outline {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .rect {
+    stroke-dashoffset: 5;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s;
+    stroke: #fff;
+  }
+  
+  .nav {
+    position: relative;
+    width: 400px;
+    height: 60px;
+  }
+  
+  .container:hover .outline .rect {
+    transition: 999999s;
+    /* Must specify these values here as something *different* just so that the transition works properly */
+    stroke-dashoffset: 1;
+    stroke-dasharray: 0;
+  }
+  
+  .container {
+    position: absolute;
+    inset: 0;
+    background: #bef6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    margin-left: 550px;
+  }
+  
+  .btn {
+    padding: 0.5em 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 6px;
+  }
+  
+  .btn:hover {
+    background: #fff3;
+  }
+  
+  .btn:nth-child(1):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 2 8 73.3 8 10.7;
+  }
+  
+  .btn:nth-child(2):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+  }
+  
+  .btn:nth-child(3):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+  }
+  
+  .btn:nth-child(4):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+  }
+  
+  .btn:hover ~ .outline .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s !important;
+  }
+  
+  @media (max-width: 600px) {
+  .scroll-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .member {
+    width: 100%;
+  }
+
+  .container {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+:root {
+  --primary-bg: #333;
+  --highlight: #ff7e5f;
+  --font-main: Arial, sans-serif;
+}
+body {
+  font-family: var(--font-main);
+}
